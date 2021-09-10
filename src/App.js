@@ -9,13 +9,13 @@ function App() {
   const [newStatus, setNewStatus] = useState("");
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/api/get").then((response) => {
+    Axios.get("https://todo-mysql-deploy.herokuapp.com/api/get").then((response) => {
       setTaskList(response.data);
     });
   }, []);
 
   const addTask = () => {
-    Axios.post("http://localhost:3001/api/insert", {
+    Axios.post("https://todo-mysql-deploy.herokuapp.com/api/insert", {
       taskName: task,
       statusName: status,
     });
@@ -27,12 +27,12 @@ function App() {
   };
   // todo-mysql-deploy.herokuapp.com
   const deleteTask = (task) => {
-    Axios.delete(`http://localhost:3001/api/delete/${task}`);
+    Axios.delete(`https://todo-mysql-deploy.herokuapp.com/api/delete/${task}`);
   }
 
   const updateStatus = (task) => {
 
-    Axios.put("http://localhost:3001/api/update", {
+    Axios.put("https://todo-mysql-deploy.herokuapp.com/api/update", {
       task: task,
       status: newStatus,
     });
