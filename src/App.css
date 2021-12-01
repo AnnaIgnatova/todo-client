@@ -2,15 +2,18 @@
   box-sizing: border-box;
   margin: 0;
 }
+body {
+    background-color: rgb(3, 1, 19);
+}
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: rgb(3, 1, 19);
   font-family: sans-serif;
   color: rgb(255, 255, 255);
+  height: 100%;
 }
 .app_title {
   font-size: 56px;
@@ -89,4 +92,21 @@ input {
 input::placeholder {
   color: #fff;
   font-size: 18px;
+}
+.registration_form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+  border-radius: 5px;
+  top: 0;
+  right: 0;
+}
+.registration_form > input {
+  background-color: rgb(34, 34, 34);
+  margin-bottom: 20px;
+}
+.registration_form > label {
+  margin-bottom: 5px;
 }
